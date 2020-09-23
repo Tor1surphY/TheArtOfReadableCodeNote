@@ -20,7 +20,7 @@ minimizing the time-till-understanding is an even better goal.
 
 **key idea: Packing information into your names**
 
-1. Choosing specific words
+### 1. Choosing specific words
 
 in a cache program, `getPage()` is not good as `downloadPage()`
 
@@ -41,7 +41,7 @@ in a thread class, `stop()` depends on what exactly it does, more specific name 
 
 **key idea: It’s better to be clear and precise than to be cute**
 
-2. Avoiding generic names (or knowing when to use them)
+### 2. Avoiding generic names (or knowing when to use them)
 
 pick a name that describes the entity’s value or purpose
 
@@ -96,7 +96,7 @@ guess if we use `SaveData(tmp, ...)`, it is not clear.
 The name `tmp` should be used only in cases when being short-lived and temporary 
 is the most important fact about that variable.
 
-3. Using concrete names instead of abstract names
-4. Attaching extra information to a name, by using a suffix or prefix
-5. Deciding how long a name should be
-6. Using name formatting to pack extra information
+### 3. Using concrete names instead of abstract names
+### 4. Attaching extra information to a name, by using a suffix or prefix
+### 5. Deciding how long a name should be
+### 6. Using name formatting to pack extra information
