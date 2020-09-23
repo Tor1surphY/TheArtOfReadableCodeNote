@@ -16,7 +16,7 @@ minimizing the time-till-understanding is an even better goal.
 
 ---
 
-# Chaoter2 Packing Infomation into Names
+# Chapter2 Packing Infomation into Names
 
 **key idea: Packing information into your names**
 
