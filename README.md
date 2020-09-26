@@ -43,7 +43,7 @@ in a thread class, `stop()` depends on what exactly it does, more specific name 
 
 ### 2. Avoiding generic names (or knowing when to use them)
 
-pick a name that describes the entity’s value or purpose
+- pick a name that describes the entity’s value or purpose
 
 in a JavaScript function that use `retval`
 
@@ -95,6 +95,23 @@ guess if we use `SaveData(tmp, ...)`, it is not clear.
 
 The name `tmp` should be used only in cases when being short-lived and temporary 
 is the most important fact about that variable.
+
+- Sometimes there are better iterator names than i, j, and k。
+
+```c++
+for(int i = 0; i < clubs.size(); i++)
+    for(int j = 0; j < clubs[i].members.size(); j++)
+        for(int k = 0; k < users.size(); k++)
+            if(clubs[i].members[k] == users[j])
+                cout << "user[" << j << "] is in club[" << i << "]" << endl;
+```
+
+better choice is `if(clubs[ci].members[mi] == users[ui])`
+
+- there are some situations where generic names are useful
+
+If you’re going to use a generic name like tmp, it, 
+or retval, have a good reason for doing so.
 
 ### 3. Using concrete names instead of abstract names
 ### 4. Attaching extra information to a name, by using a suffix or prefix
