@@ -96,7 +96,7 @@ guess if we use `SaveData(tmp, ...)`, it is not clear.
 The name `tmp` should be used only in cases when being short-lived and temporary 
 is the most important fact about that variable.
 
-- Sometimes there are better iterator names than i, j, and k。
+- Sometimes there are better iterator names than i, j, and k.
 
 ```c++
 for(int i = 0; i < clubs.size(); i++)
@@ -110,10 +110,14 @@ better choice is `if(clubs[ci].members[mi] == users[ui])`
 
 - there are some situations where generic names are useful
 
-If you’re going to use a generic name like tmp, it, 
-or retval, have a good reason for doing so.
+If you’re going to use a generic name like `tmp`, `it`, or `retval`, 
+have a good reason for doing so.
 
 ### 3. Using concrete names instead of abstract names
+
+When naming a variable, function, or other element, describe it concretely rather than
+abstractly.
+
 ### 4. Attaching extra information to a name, by using a suffix or prefix
 ### 5. Deciding how long a name should be
 ### 6. Using name formatting to pack extra information
