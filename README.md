@@ -119,5 +119,56 @@ When naming a variable, function, or other element, describe it concretely rathe
 abstractly.
 
 ### 4. Attaching extra information to a name, by using a suffix or prefix
+
+A variable’s name is like a tiny comment.
+
+`string id; // Example: "af84ef845cd8"`
+
+`hex_id` is more explicit for the reader to remember the ID’s format.
+
+- Value with Units
+
+```java
+var start = (new Date()).getTime(); // top of the page
+...
+var elapsed = (new Date()).getTime() - start; // bottom of the page
+document.writeln("Load time was: " + elapsed + " seconds");
+```
+
+this code doesn't have any wrong but dosen't work, 
+because `getTime()` return `ms` not `s`.
+
+By attaching `_ms` to make more explicit.
+
+```java
+var start_ms = (new Date()).getTime(); // top of the page
+...
+var elapsed_ms = (new Date()).getTime() - start_ms; // bottom of the page
+document.writeln("Load time was: " + elapsed_ms / 1000 + " seconds");
+```
+
+| Function parameter | Renaming parameter to encode units |
+| ---- | ---- |
+| Start(int delay ) | delay → delay_secs |
+| CreateCache(int size ) | size → size_mb |
+| ThrottleDownload(float limit) | limit → max_kbps |
+| Rotate(float angle) | angle → degrees_cw |
+
+- Encoding Other Important Attributes
+
+You should do it any time there’s something 
+dangerous or surprising about the variable.
+
+| Situation | Variable name | Better name |
+| ---- | ---- | ---- |
+| A password is in “plaintext” and should be encrypted before further processing | password | plaintext_password |
+| A user-provided comment that needs escaping before being displayed | comment | unescaped_comment |
+| Bytes of html have been converted to UTF-8 | html | html_utf8 |
+| Incoming data has been “url encoded” | data | data_urlenc |
+
+They’re most important in places where a bug can easily sneak 
+in if someone mistakes what the variable is, 
+especially if the consequences are dire, as with a security bug. 
+
 ### 5. Deciding how long a name should be
 ### 6. Using name formatting to pack extra information
