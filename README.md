@@ -12,7 +12,7 @@ minimizing the time-till-understanding is an even better goal.
 
 ---
 
-**Surface-Level Improvement**
+**Part I Surface-Level Improvement**
 
 ---
 
@@ -171,4 +171,44 @@ in if someone mistakes what the variable is,
 especially if the consequences are dire, as with a security bug. 
 
 ### 5. Deciding how long a name should be
+
+- shorter name is okay for shorter scope
+
+When you go on a short vacation, you typically pack 
+less luggage than if you go on a long vacation. 
+
+- Acronyms and Abbreviations
+
+Would a new teammate understand what the name means? 
+
+If so, then  project-specific abbreviations are probably okay.
+
+- Throwing Out Unneeded Words
+
+`convertToString()` is not clear and simple as `toString()`
+
 ### 6. Using name formatting to pack extra information
+
+`to_be_process` for variable names
+
+`ClassName`     for class names
+
+`quickSort()`   for function names
+
+`MAX_DATA_SIZE` for macro definition names
+
+`my_name_`      for const variable names
+
+`_my_sercet`    for private variable names in class
+
+### Summary
+
+- Use specific words
+- Avoid generic names
+- Use concrete names
+- Attach important details
+- Use longer names for larger scopes
+- Use capitalization, underscores, and so on in a meaningful way
+
+# Chapter3 Names That Can’t Be Misconstrued
+
