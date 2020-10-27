@@ -212,3 +212,62 @@ If so, then  project-specific abbreviations are probably okay.
 
 # Chapter3 Names That Can’t Be Misconstrued
 
+**key idea: Actively scrutinize(仔细检查) your names by asking yourself, “What other meanings could someone interpret from this name?”**
+
+- Example 1:
+
+`results = Database.all_objects.filter("year <= 2011")`
+
+If you want “to pick out,” a better name is `select()`. 
+If you want “to get rid of,” a better name is `exclude()`.
+
+- Prefer `min` and `max` for (Inclusive) Limits
+
+- Prefer `first` and `last` for Inclusive Ranges
+
+- Prefer `begin` and `end` for Inclusive/Exclusive Ranges
+
+- Naming Booleans
+
+In general, adding words like `is, has, can, or should` can make booleans more clear.
+it’s best to avoid *negated terms* in a name. 
+
+- Matching Expectations of Users
+
+```java
+public class StatisticsCollector {
+    public void addSample(double x) { ... }
+    public double getMean() {
+        // Iterate through all samples and return total / num_samples
+    }
+    ...
+}
+```
+
+Instead, the method should be renamed to something like `computeMean()`.
+
+```c++
+void ShrinkList(list<Node>& list, int max_size) {
+    while (list.size() > max_size) {
+    FreeNode(list.back());
+    list.pop_back();
+    }
+}
+```
+
+`list.size()` is an O(N) operation, 
+which makes `ShrinkList()` an O(N^2) operation.
+`countSize()` or `countElements()`, the same mistake would be less likely.
+
+### Summary
+
+- The best names are ones that can’t be misconstrued
+- Before you decide on a name, imagine how your name might be misunderstood
+- `max_` and `min_`  for upper or lower limit for a value
+- `first` and `last` for inclusive ranges
+- `begin` and `end` for inclusive/exclusive ranges, because they’re the most idiomatic(惯用的)
+- use words like is and has to make boolean clear and avoid negated terms
+- Be aware of users’ expectations about certain words
+
+# Chapter4 Aesthetics
+
