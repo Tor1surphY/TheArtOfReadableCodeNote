@@ -232,7 +232,7 @@ If you want “to get rid of,” a better name is `exclude()`.
 In general, adding words like `is, has, can, or should` can make booleans more clear.
 it’s best to avoid *negated terms* in a name. 
 
-- Matching Expectations of Users
+### Matching Expectations of Users
 
 ```java
 public class StatisticsCollector {
@@ -270,4 +270,65 @@ which makes `ShrinkList()` an O(N^2) operation.
 - Be aware of users’ expectations about certain words
 
 # Chapter4 Aesthetics
+
+three principles we use:
+
+1. use consistent layout(布局), with patterns the reader can get used to
+2. make similar code look similar
+3. group related lines of code into blocks
+
+### Why Do Aesthetics Matter?
+
+bad aesthetically code example:
+
+```c++
+class StatsKeeper {
+public:
+    // A class for keeping track of a series of doubles
+    void Add(double d); // and methods for quick statistics about them
+    private: int count; /* how many so far
+    */ public:
+            double Average();
+private: double minimum;
+    list<double>
+    past_items
+        ;double maximum;
+};
+```
+
+aesthetically pleasing code example:
+
+```c++
+// A class for keeping track of a series of doubles
+// and methods for quick statistics about them.
+class StatsKeeper {
+public:
+    void Add(double d);
+    double Average();
+private:
+    list<double> past_items;
+    int count; // how many so far
+    double minimum;
+    double maximum;
+};
+```
+
+### Rearrange Line Breaks to Be Consistent and Compact
+
+a good example
+
+```java
+public class PerformanceTester {
+    //    TcpConnectionSimulator(throughput, latency, jitter, packet_loss)
+    //                           [Kbps]      [ms]     [ms]    [percent]
+    public static final TcpConnectionSimulator wifi =
+        new TcpConnectionSimulator(500,      80,      200,      1);
+
+    public static final TcpConnectionSimulator t3_fiber =
+        new TcpConnectionSimulator(45000,    10,      0,        0);
+
+    public static final TcpConnectionSimulator cell =
+        new TcpConnectionSimulator(100,      400,     250,      5);
+}
+```
 
