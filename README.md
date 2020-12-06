@@ -353,7 +353,7 @@ CheckFullName("John" ,        ""                  , "more than one result");
 
 Whatever the order, you should use the same order throughout your code.
 
-#### Oraganize Declarations into Blocks
+### Oraganize Declarations into Blocks
 
 a good exmaple:
 
