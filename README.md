@@ -339,10 +339,10 @@ public class PerformanceTester {
 Straight edges and columns, example:
 
 ```c++
-CheckFullName("Doug Adams" , "Mr. Douglas Adams" , "");
-CheckFullName(" Jake Brown ", "Mr. Jake Brown III", "");
-CheckFullName("No Such Guy" , "" , "no match found");
-CheckFullName("John" , "" , "more than one result");
+CheckFullName("Doug Adams" ,  "Mr. Douglas Adams" , "");
+CheckFullName("Jake Brown ",  "Mr. Jake Brown III", "");
+CheckFullName("No Such Guy" , ""                  , "no match found");
+CheckFullName("John" ,        ""                  , "more than one result");
 ```
 
 ### Pick a Meaningful Order, ans Use It Consistently
