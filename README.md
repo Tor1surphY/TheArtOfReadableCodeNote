@@ -331,3 +331,65 @@ public class PerformanceTester {
         new TcpConnectionSimulator(100,      400,     250,      5);
 }
 ```
+
+### Use Methods to Clean Up Irregularity
+
+### Use Column Alignment When Helpful
+
+Straight edges and columns, example:
+
+```c++
+CheckFullName("Doug Adams" , "Mr. Douglas Adams" , "");
+CheckFullName(" Jake Brown ", "Mr. Jake Brown III", "");
+CheckFullName("No Such Guy" , "" , "no match found");
+CheckFullName("John" , "" , "more than one result");
+```
+
+### Pick a Meaningful Order, ans Use It Consistently
+
+- Match the order of the variables to the order of the input
+- Order them from “most important” to “least important.”
+- Order them alphabetically.
+
+Whatever the order, you should use the same order throughout your code.
+
+#### Oraganize Declarations into Blocks
+
+a good exmaple:
+
+```c++
+class FrontendServer {
+public:
+    FrontendServer();
+    ~FrontendServer();
+
+    // Handlers
+    void ViewProfile(HttpRequest* request);
+    void SaveProfile(HttpRequest* request);
+    void FindFriends(HttpRequest* request);
+
+    // Request/Reply Utilities
+    string ExtractQueryParam(HttpRequest* request, string param);
+    void ReplyOK(HttpRequest* request, string html);
+    void ReplyNotFound(HttpRequest* request, string error)
+
+    // Database Helpers
+    void OpenDatabase(string location, string user);
+    void CloseDatabase(string location);
+};
+```
+
+### Break Code into "Paragraphs"
+
+as above
+
+### Personal Style versus Consistency
+
+**key idea: Consistent style is more important than the “right” style.**
+
+### Summary
+
+- If multiple blocks of code are doing similar things, try to give them the same silhouette.
+- Aligning parts of the code into “columns” can make code easy to skim through.
+- If code mentions A, B, and C in one place, don’t say B, C, and A in another. Pick a meaningful order and stick with it.
+- Use empty lines to break apart large blocks into logical “paragraphs.”
