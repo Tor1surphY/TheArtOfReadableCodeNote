@@ -393,3 +393,62 @@ as above
 - Aligning parts of the code into “columns” can make code easy to skim through.
 - If code mentions A, B, and C in one place, don’t say B, C, and A in another. Pick a meaningful order and stick with it.
 - Use empty lines to break apart large blocks into logical “paragraphs.”
+
+# Chapter5 Knowing What to Comment
+
+**key idea: the purpose of commenting is to help the reader know as much as the writer did**
+
+organized the chapter into the following areas:
+
+1. knowing what not to comment
+2. recording your thoughts as you code
+3. putting yourself in the readers' shoes, to imagine what they'll need to konw
+
+### What NOT to Comment
+
+**key idea: don't comment on facts that can be derived quickly from the code itself**
+
+#### don't comment just for the sake of commenting
+
+comment like this:
+
+```c++
+// Find the Node in the given subtree, with the given name, using the given depth.
+Node* FindNodeInSubtree(Node* subtree, string name, int depth);
+```
+
+is not as good as this:
+
+```c++
+// Find a Node with the given 'name' or return NULL.
+// If depth <= 0, only 'subtree' is inspected.
+// If depth == N, only 'subtree' and N levels below are inspected.
+Node* FindNodeInSubtree(Node* subtree, string name, int depth);
+```
+
+#### don't comment bad names - fix the names instead
+
+a good name is better than a good comment, a function name should be "self-documenting"
+
+good code > bad code + good comments
+
+### Recording Your Thoughts
+
+#### include "director commentary"
+
+include comments to record valuable insights about the code
+
+#### comment the flaws in your code
+
+| Maker | Typical meaning |
+| ---- | ---- |
+| TODO: | stuff I haven't gotten around to yet |
+| FIXME: | konwn-broken code here |
+| HACK: | admittedly inelegant solution to a problem |
+| XXX: | danger! major problem here |
+
+The important thing is that you should always feel free to comment on your thoughts about how the code should change in the future.
+
+#### comment on your constants
+
+most constants could be improved by adding a comment.
