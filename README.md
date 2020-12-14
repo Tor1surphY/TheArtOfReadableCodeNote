@@ -452,3 +452,60 @@ The important thing is that you should always feel free to comment on your thoug
 #### comment on your constants
 
 most constants could be improved by adding a comment.
+
+### Put Yourself in the Reader's Shoes
+
+#### anticipating(期待) likely questions
+
+#### advertising likely pitfalls(陷阱)
+
+you want to “think ahead” and anticipate the problems that people might run into when using your code.
+
+#### “big picture" comments
+
+s a simple example of a file-level comment:
+
+```c+++
+// This file contains helper functions that provide a more convenient interface to our
+// file system. It handles file permissions and other nitty-gritty details.
+```
+
+A few well-chosen sentences are better than nothing at all.
+
+### Summary Comments
+
+a comment that neatly summarizes the low-level code below it.
+
+It’s especially helpful to have summary comments in longer functions where there are a few large “chunks” inside.
+
+*should you comment the what, the thy, or the how?*
+
+Advice is to do whatever helps the reader understand the code more easily.
+
+### Final Thoughts —— Getting Over Writer's Block
+
+We’ve broken down the task of writing a comment into these simpler steps:
+
+1. Write down whatever comment is on your mind.
+2. Read the comment, and see what (if anything) needs to be improved.
+3. Make improvements.
+
+### Summary
+
+What not to comment:
+
+- Facts that can be quickly derived from the code itself.
+- “Crutch comments” that make up for bad code (such as a bad function name)—fix the code instead.
+
+Thoughts you should be recording include:
+
+- Insights about why code is one way and not another (“director commentary”).
+- Flaws in your code, by using markers like TODO: or XXX:.
+- The “story” for how a constant got its value.
+
+Put yourself in the reader’s shoes:
+
+- Anticipate which parts of your code will make readers say “Huh?” and comment those.
+- Document any surprising behavior an average reader wouldn’t expect.
+- Use “big picture” comments at the file/class level to explain how all the pieces fit together.
+- Summarize blocks of code with comments so that the reader doesn’t get lost in the details.
