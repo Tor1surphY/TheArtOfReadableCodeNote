@@ -1,6 +1,6 @@
 # The Art of Readable Code
 
----
+
 
 # Chapter1 Code Should Be Easy to Understand
 
