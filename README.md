@@ -465,7 +465,7 @@ you want to “think ahead” and anticipate the problems that people might run 
 
 s a simple example of a file-level comment:
 
-```c+++
+```c++
 // This file contains helper functions that provide a more convenient interface to our
 // file system. It handles file permissions and other nitty-gritty details.
 ```
